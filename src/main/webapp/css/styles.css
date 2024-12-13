@@ -1,0 +1,370 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/bgimg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    width: 100%;
+    min-height: 100vh; /* Ensure body takes full height of the window */
+    overflow-x:auto; /* Prevent horizontal scrolling */
+    overscroll-behavior-x: none;
+}
+
+nav {
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(80deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(0, 212, 255, 1) 100%);
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: block;
+    
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: white;
+    border-bottom: 4px solid white;
+    font-size: 20px;
+}
+
+
+
+.section1, .section3 {
+    width: 100%;
+    padding: 20px;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    width: 90%; 
+    max-width: 600px;
+    margin-left: 2%;
+    color: #000;
+ position: relative;
+}
+
+.content .par {
+    padding-left: 5px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1 {
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 10px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn {
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.content .cn a {
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover {
+    background-color: #fff;
+}
+
+.content span {
+    color: #ff7200;
+    font-size: 65px;
+}
+
+.search-container {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    display: inline;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 1);
+    
+ 
+    padding: 20px;
+    margin-left:50%;
+    margin-top:2%;
+ 
+    
+}
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.search-header .btn, .search-header .btn-selected {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.search-header .btn-selected {
+    background-color: #0055a5;
+}
+
+.pax-info {
+    display: flex;
+    align-items: center;
+}
+
+.promo-code {
+    color: #0055a5;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.search-result{
+	
+	align-items: center;
+}
+
+.search-form input[type="text"],
+.search-form input[type="date"] {
+    width: 90%; /* Full width for better responsiveness */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn-search {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category-btn {
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background-color: rgb(128, 128, 255);
+}
+
+.category-btn:visited {
+    background-color: rgb(128, 128, 255); 
+}
+
+/* Hotel Cards Styles */
+.hotel-container {
+    display: inline-flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center the content */
+    margin-top: 10%;
+    width: 100%;
+    padding: 20px;
+}
+
+.titLe {
+    color: #ff8000;
+}
+
+.card {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 4px 10px 0 rgba(20, 5, 5, 1);
+    padding: 10px;
+    width: calc(100% - 40px); /* Adjust for margins */
+    max-width: 380px; /* Maintain max width */
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #003366;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #0055a5;
+}
+
+.about-content {
+     max-width: 960px;
+            margin: 20px auto;
+           
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.containerabout {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+       
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .team-member {
+            margin: 20px;
+            text-align: center;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .team-member h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+/* Flight Information Table */
+table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+   margin-left: 10%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: white;
+}
+
+/* Book Ticket Link */
+.book-ticket-link {
+   background-color: #ff8000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.book-ticket-link:hover {
+     background-color: #e57000;
+}
+.section-bill{
+	border: 2px solid black;
+	  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+   
+}
